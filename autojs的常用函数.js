@@ -12,3 +12,8 @@
     }
     log(arguments.callee.name + '结束')
 }
+
+停止app = function (appName) {
+    var packageName=getPackageName(appName);
+    shell('am force-stop ' + packageName,true);
+  }
